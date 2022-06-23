@@ -11,6 +11,7 @@ class Habit extends PureComponent {
   handleDelete = () => {
     this.props.onDelete(this.props.habit);
   };
+
   render() {
     console.log(this.props.habit.name);
     const { name, count } = this.props.habit;
