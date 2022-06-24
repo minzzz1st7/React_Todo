@@ -3,6 +3,7 @@ import React, { PureComponent } from "react";
 class Habit extends PureComponent {
   handleIncrement = () => {
     // props로 전달된 콜백함수들을 호출
+    console.log("handleIncre habit.jsx에서 호출", this.props.habit);
     this.props.onIncrement(this.props.habit);
   };
   handleDecrement = () => {
