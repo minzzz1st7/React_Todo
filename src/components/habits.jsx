@@ -13,6 +13,7 @@ class Habits extends Component {
   };
 
   handleReset = () => {
+    console.log("onResetAll이 클릭도ㅙㅆ다!!!");
     this.props.onResetAll();
   };
 

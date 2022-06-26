@@ -24,7 +24,6 @@ class App extends Component {
     this.setState({ habits: habits });
   };
   handleDecrement = (habit) => {
-
     const habits = this.state.habits.map((item) => {
       if (item.id === habit.id) {
         const count = habit.count - 1;
@@ -50,10 +49,11 @@ class App extends Component {
   };
 
   handleReset = () => {
+    console.log("app.jsx 들어왔다!! handleReset!!!!");
     const habits = this.state.habits.map((habit) => {
-      habit.count = 0;
-      return habit;
+      return { ...habit, count: 0 };
     });
+
     this.setState({ habits });
   };
 
